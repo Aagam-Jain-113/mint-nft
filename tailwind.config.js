@@ -8,7 +8,8 @@ module.exports = {
         "primary" : "#1A1A1A",
         "secondary": "#252525",
         "primaryText":"#484848",
-        "secondaryText": "#6D6D6D",
+        "secondaryText": "#BDBDBD",
+        "addButton": "#6C6C6C"
       }
     },
   },

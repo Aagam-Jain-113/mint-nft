@@ -1,8 +1,32 @@
 import Head from 'next/head'
 import DynamicTable from '../components/DynamicTable';
 import SideBar from '../components/SideBar';
+import Link from 'next/link';
 
 export default function Home() {
+
+  const pages = [
+    {
+      id: 1,
+      title: "details",
+      link: "/Details",
+    },
+    {
+      id: 2,
+      title: "Pricing",
+      link: "/Pricing",
+    },
+    {
+      id: 3,
+      title: "Collaborators",
+      link: "/Collaborators",
+    },
+    {
+      id: 4,
+      title: "mint nft",
+      link: "/mintNft",
+    },
+  ]
   return (
     <div className="bg-primary min-h-screen">
       <Head>
@@ -24,6 +48,24 @@ export default function Home() {
         </div>
         <DynamicTable />
       </div>
+
+      <ul className="list-none mt-12 justify-center flex space-x-4">
+        {pages.map(({ id, title, link }) => {
+          return (
+            <li className="text-white uppercase" key={id}>
+              <Link href={link}>
+                {id === 4 ? <p>{title}</p> : <p>{title + " >"}</p>}
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
+
+      <Link href="/mintNft">
+        <button className="bg-white px-4 py-2 h-10 block mx-auto mt-10 w-40">
+          {`Next Page >`}
+        </button>
+      </Link>
     </div>
   )
 }

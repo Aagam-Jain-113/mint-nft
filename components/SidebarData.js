@@ -12,19 +12,25 @@ export const SidebarData = [
     },
     {
         title: 'Details',
-        path: '/details',
+        path: '/Details',
         icon: <IoIcons.IoIosPaper />,
         cName: 'nav-text'
     },
     {
         title: 'Pricing',
-        path: '/pricing',
+        path: '/Pricing',
         icon: <IoIcons.IoIosPricetags />,
         cName: 'nav-text'
     },
     {
         title: 'Collaborators',
-        path: '/collaborators',
+        path: '/Collaborators',
+        icon: <IoIcons.IoMdPeople />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Mint NFT',
+        path: '/mintNft',
         icon: <IoIcons.IoMdPeople />,
         cName: 'nav-text'
     }
